@@ -183,9 +183,11 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(runners) {
   let fullName = [];
-  runners.forEach(() => {
-
+  runners.forEach((currentItem, index, array) => {
+    currentItem = `${currentItem.last_name}, ${currentItem.first_name}`;
+    fullName.push(currentItem)
   });
+  return fullName;
 }
 
 /**
