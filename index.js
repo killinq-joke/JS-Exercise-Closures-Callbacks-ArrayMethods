@@ -294,18 +294,9 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(limit) {
-  let count = 0;
+  let count = -1;
   function counter() {
-    if (count < limit) {
-      count += 1
-      return count;     
-    }
-      else
-      
-      {
-        return count = 0;
-      }
-       
+    return count < limit ? count += 1 : count = 0
     
   }
 
